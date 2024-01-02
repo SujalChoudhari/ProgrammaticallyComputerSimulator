@@ -92,14 +92,14 @@ impl Memory {
     }
 }
 
-struct MemorySet {
+struct MemoryAssembly {
     pub stack: Memory,
     pub heap: Memory,
     pub data: Memory,
     pub text: Memory,
 }
 
-impl MemorySet {
+impl MemoryAssembly {
     pub fn new(
         stack_size: usize,
         heap_size: usize,
@@ -107,7 +107,7 @@ impl MemorySet {
         text_size: usize,
         index_table_size: usize,
     ) -> Self {
-        MemorySet {
+        MemoryAssembly {
             stack: Memory::new(stack_size, index_table_size),
             heap: Memory::new(heap_size, index_table_size),
             data: Memory::new(data_size, index_table_size),

@@ -20,7 +20,7 @@ impl Register {
     }
 }
 
-pub struct RegisterSet {
+pub struct RegisterAssembly {
     pub memory_buffer_register: Register,
     pub memory_address_register: Register,
     pub instruction_register: Register,
@@ -31,9 +31,9 @@ pub struct RegisterSet {
     pub multiplier_quotient: Register,
 }
 
-impl RegisterSet {
+impl RegisterAssembly {
     pub fn new() -> Self {
-        RegisterSet {
+        RegisterAssembly {
             memory_buffer_register: Register::new(0),
             memory_address_register: Register::new(0),
             instruction_register: Register::new(0),
